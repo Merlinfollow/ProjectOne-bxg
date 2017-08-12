@@ -30,8 +30,10 @@
         </div>
     </div>
 
-    <script src="/views/public/assets/jquery/jquery.min.js"></script>
-    <script src="/views/public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--<script src="/views/public/assets/jquery/jquery.min.js"></script>-->
+    <!--<script src="/views/public/assets/bootstrap/js/bootstrap.min.js"></script>-->
+
+    <?php include '/views/common/script.html'?>
 
     <script>
         $("#formLogin").submit(function(e){
@@ -43,6 +45,7 @@
                 data:data,
                 success:function(result){
                     alert("登录成功");
+                    location.href='/';
                 },
                 error:function(errorInfo){
                     alert("用户名或密码错误");
